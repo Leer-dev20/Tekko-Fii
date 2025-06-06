@@ -1,0 +1,1019 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Tekko-Fii - Développeurs</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+<link href="projet.html" rel="stylesheet"/>
+<link href="index.html" rel="stylesheet"/>
+<link href="developper.html" rel="stylesheet"/>
+<link href="entreprise.html" rel="stylesheet"/>
+<link href="recherche-dev.html" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#4285F4',secondary:'#34A853'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body {
+font-family: 'Inter', sans-serif;
+}
+input:focus, select:focus {
+outline: none;
+}
+.range-slider::-webkit-slider-thumb {
+-webkit-appearance: none;
+appearance: none;
+width: 20px;
+height: 20px;
+border-radius: 50%;
+background: #4285F4;
+cursor: pointer;
+}
+.range-slider::-moz-range-thumb {
+width: 20px;
+height: 20px;
+border-radius: 50%;
+background: #4285F4;
+cursor: pointer;
+border: none;
+}
+.custom-checkbox {
+position: relative;
+padding-left: 28px;
+cursor: pointer;
+user-select: none;
+}
+.custom-checkbox input {
+position: absolute;
+opacity: 0;
+cursor: pointer;
+height: 0;
+width: 0;
+}
+.checkmark {
+position: absolute;
+top: 0;
+left: 0;
+height: 20px;
+width: 20px;
+background-color: #fff;
+border: 1px solid #d1d5db;
+border-radius: 4px;
+}
+.custom-checkbox:hover input ~ .checkmark {
+background-color: #f3f4f6;
+}
+.custom-checkbox input:checked ~ .checkmark {
+background-color: #4285F4;
+border-color: #4285F4;
+}
+.checkmark:after {
+content: "";
+position: absolute;
+display: none;
+}
+.custom-checkbox input:checked ~ .checkmark:after {
+display: block;
+}
+.custom-checkbox .checkmark:after {
+left: 7px;
+top: 3px;
+width: 6px;
+height: 10px;
+border: solid white;
+border-width: 0 2px 2px 0;
+transform: rotate(45deg);
+}
+.custom-select {
+position: relative;
+}
+.custom-select select {
+display: none;
+}
+.select-selected {
+background-color: white;
+}
+.select-selected:after {
+position: absolute;
+content: "";
+top: 14px;
+right: 10px;
+width: 0;
+height: 0;
+border: 6px solid transparent;
+border-color: #4285F4 transparent transparent transparent;
+}
+.select-items div,.select-selected {
+padding: 8px 16px;
+border: 1px solid #d1d5db;
+cursor: pointer;
+user-select: none;
+border-radius: 8px;
+}
+.select-items {
+position: absolute;
+background-color: white;
+top: 100%;
+left: 0;
+right: 0;
+z-index: 99;
+border-radius: 8px;
+box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+margin-top: 4px;
+}
+.select-hide {
+display: none;
+}
+.same-as-selected {
+background-color: #f3f4f6;
+}
+.dev-card {
+transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.dev-card:hover {
+transform: translateY(-5px);
+}
+.custom-switch {
+position: relative;
+display: inline-block;
+width: 50px;
+height: 24px;
+}
+.custom-switch input {
+opacity: 0;
+width: 0;
+height: 0;
+}
+.switch-slider {
+position: absolute;
+cursor: pointer;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: #e5e7eb;
+transition: .4s;
+border-radius: 34px;
+}
+.switch-slider:before {
+position: absolute;
+content: "";
+height: 18px;
+width: 18px;
+left: 3px;
+bottom: 3px;
+background-color: white;
+transition: .4s;
+border-radius: 50%;
+}
+input:checked + .switch-slider {
+background-color: #4285F4;
+}
+input:checked + .switch-slider:before {
+transform: translateX(26px);
+}
+</style>
+<link href="style.css" rel="stylesheet"/><script defer="True" src="script.js"></script></head>
+<body class="bg-white min-h-screen">
+<!-- Header -->
+<header class="w-full py-4 px-6 flex justify-between items-center border-b border-gray-100">
+<div class="flex items-center">
+<a class="text-2xl font-bold font-['Pacifico'] text-gray-900" href="index.html">Tekko-Fii</a>
+</div>
+<div class="flex items-center space-x-8">
+<nav class="hidden md:flex space-x-8">
+<a class="text-gray-800 hover:text-primary font-medium" href="projet.html">Projets</a>
+<a class="text-gray-800 hover:text-primary font-medium" href="developper.html">Développeurs</a>
+<a class="text-gray-800 hover:text-primary font-medium" href="entreprise.html">Entreprise</a>
+</nav>
+<div class="flex items-center space-x-4">
+<a class="text-gray-800 hover:text-primary font-medium whitespace-nowrap" href="inscrire.html">S'inscrire</a>
+<a class="bg-primary text-white px-5 py-2 !rounded-button font-medium hover:bg-blue-600 transition-colors whitespace-nowrap" href="connexion.html">Se connecter</a>
+</div>
+</div>
+</header>
+<!-- Page Title -->
+<div class="bg-gray-50 py-8">
+<div class="container mx-auto px-6">
+<h1 class="text-3xl font-bold text-gray-900">Trouvez votre développeur</h1>
+<p class="text-gray-600 mt-2">Découvrez des milliers de développeurs talentueux prêts à réaliser vos projets</p>
+</div>
+</div>
+<!-- Search and Filter Section -->
+<section class="py-8 px-6 border-b border-gray-200">
+<div class="container mx-auto">
+<!-- Search Bar -->
+<div class="flex mb-8">
+<div class="relative flex-1">
+<input class="w-full px-4 py-3 pr-10 border border-gray-300 !rounded-button focus:border-primary text-gray-800" id="searchInput" placeholder="Rechercher un développeur..." type="text"/>
+<div class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400">
+<div class="w-6 h-6 flex items-center justify-center">
+<i class="ri-search-line"></i>
+</div>
+</div>
+</div>
+<button class="bg-primary text-white px-6 py-3 ml-4 !rounded-button font-medium hover:bg-blue-600 transition-colors whitespace-nowrap" id="searchBtn">Rechercher</button>
+</div>
+<!-- Filters -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+<!-- Compétences Filter -->
+<div>
+<label class="block text-sm font-medium text-gray-700 mb-2">Compétences</label>
+<div class="relative">
+<button class="w-full px-4 py-2.5 border border-gray-300 !rounded-button bg-white text-gray-800 text-left flex justify-between items-center" id="skillsFilterBtn">
+<span>Sélectionner</span>
+<div class="w-4 h-4 flex items-center justify-center">
+<i class="ri-arrow-down-s-line"></i>
+</div>
+</button>
+<div class="hidden absolute left-0 right-0 mt-1 bg-white border border-gray-200 !rounded-button shadow-lg z-10 max-h-60 overflow-y-auto" id="skillsDropdown">
+<div class="p-3">
+<label class="custom-checkbox block mb-2">
+<input type="checkbox" value="javascript"/>
+<span class="checkmark"></span>
+JavaScript
+</label>
+<label class="custom-checkbox block mb-2">
+<input type="checkbox" value="php"/>
+<span class="checkmark"></span>
+PHP
+</label>
+<label class="custom-checkbox block mb-2">
+<input type="checkbox" value="python"/>
+<span class="checkmark"></span>
+Python
+</label>
+<label class="custom-checkbox block mb-2">
+<input type="checkbox" value="java"/>
+<span class="checkmark"></span>
+Java
+</label>
+<label class="custom-checkbox block mb-2">
+<input type="checkbox" value="react"/>
+<span class="checkmark"></span>
+React
+</label>
+<label class="custom-checkbox block mb-2">
+<input type="checkbox" value="vue"/>
+<span class="checkmark"></span>
+Vue.js
+</label>
+<label class="custom-checkbox block mb-2">
+<input type="checkbox" value="angular"/>
+<span class="checkmark"></span>
+Angular
+</label>
+<label class="custom-checkbox block">
+<input type="checkbox" value="wordpress"/>
+<span class="checkmark"></span>
+WordPress
+</label>
+</div>
+</div>
+</div>
+</div>
+<!-- Disponibilité Filter -->
+<div>
+<label class="block text-sm font-medium text-gray-700 mb-2">Disponibilité</label>
+<div class="flex items-center space-x-4">
+<label class="custom-switch">
+<input id="availabilitySwitch" type="checkbox"/>
+<span class="switch-slider"></span>
+</label>
+<span class="text-sm text-gray-700">Disponible maintenant</span>
+</div>
+</div>
+<!-- Tarif Horaire Filter -->
+<div>
+<label class="block text-sm font-medium text-gray-700 mb-2">Tarif horaire</label>
+<div class="px-2">
+<input class="range-slider w-full h-2 bg-gray-200 rounded-full appearance-none cursor-pointer" id="rateRange" max="150" min="0" type="range" value="75"/>
+<div class="flex justify-between mt-2 text-sm text-gray-600">
+<span>0 €/h</span>
+<span id="rateValue">75 €/h</span>
+<span>150 €/h</span>
+</div>
+</div>
+</div>
+<!-- Localisation Filter -->
+<div>
+<label class="block text-sm font-medium text-gray-700 mb-2">Localisation</label>
+<div class="relative">
+<select class="w-full px-4 py-2.5 border border-gray-300 !rounded-button appearance-none bg-white text-gray-800 pr-8" id="locationSelect">
+<option value="">Toutes les localisations</option>
+<option value="france">France</option>
+<option value="belgique">Belgique</option>
+<option value="suisse">Suisse</option>
+<option value="canada">Canada</option>
+<option value="maroc">Maroc</option>
+<option value="senegal">Sénégal</option>
+<option value="remote">Télétravail uniquement</option>
+</select>
+<div class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500 pointer-events-none">
+<div class="w-4 h-4 flex items-center justify-center">
+<i class="ri-arrow-down-s-line"></i>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Developers Grid -->
+<section class="py-10 px-6">
+<div class="container mx-auto">
+<div class="flex justify-between items-center mb-6">
+<p class="text-gray-600"><span class="font-medium">186</span> développeurs trouvés</p>
+<div class="flex items-center space-x-4">
+<label class="text-sm text-gray-600 mr-2">Trier par:</label>
+<div class="relative">
+<select class="px-4 py-2 border border-gray-300 !rounded-button appearance-none bg-white text-gray-800 pr-8" id="sortSelect">
+<option value="rating">Évaluation</option>
+<option value="experience">Expérience</option>
+<option value="rate_low">Tarif (croissant)</option>
+<option value="rate_high">Tarif (décroissant)</option>
+</select>
+<div class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500 pointer-events-none">
+<div class="w-4 h-4 flex items-center justify-center">
+<i class="ri-arrow-down-s-line"></i>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Developers Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="developersGrid">
+<!-- Developer Card 1 -->
+<div class="dev-card bg-white rounded shadow-md overflow-hidden border border-gray-100 hover:shadow-lg">
+<div class="p-5">
+<div class="flex items-start">
+<div class="w-20 h-20 rounded-full overflow-hidden mr-4">
+<img alt="Alexandre Dupont" class="w-full h-full object-cover object-top" src="https://readdy.ai/api/search-image?query=professional%2520portrait%2520of%2520a%2520young%2520French%2520man%2520with%2520short%2520brown%2520hair%2520and%2520glasses%252C%2520wearing%2520a%2520blue%2520shirt%252C%2520neutral%2520expression%252C%2520clean%2520background%252C%2520high%2520quality%2520professional%2520headshot&amp;width=200&amp;height=200&amp;seq=101&amp;orientation=squarish"/>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start">
+<h3 class="font-bold text-lg">Alexandre Dupont</h3>
+<div class="flex items-center">
+<div class="w-4 h-4 flex items-center justify-center text-yellow-400 mr-1">
+<i class="ri-star-fill"></i>
+</div>
+<span class="text-sm text-gray-600">4.9</span>
+<span class="text-xs text-gray-500 ml-1">(48)</span>
+</div>
+</div>
+<p class="text-gray-600 text-sm">Développeur Full Stack</p>
+<div class="flex mt-2">
+<span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full flex items-center">
+<div class="w-3 h-3 bg-green-500 rounded-full mr-1"></div>
+Disponible
+</span>
+</div>
+</div>
+</div>
+<div class="mt-4">
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="bg-gray-100 text-gray-800 text-xs px-3 py-1 rounded-full">JavaScript</span>
+<span class="bg-gray-100 text-gray-800 text-xs px-3 py-1 rounded-full">React</span>
+<span class="bg-gray-100 text-gray-800 text-xs px-3 py-1 rounded-full">Node.js</span>
+<span class="bg-gray-100 text-gray-800 text-xs px-3 py-1 rounded-full">MongoDB</span>
+</div>
+<p class="text-sm text-gray-600 mb-3">5 ans d'expérience en développement web. Spécialisé dans les applications React et les API RESTful.</p>
+<div class="border-t border-gray-100 pt-3 mb-3">
+<p class="text-xs font-medium text-gray-500 mb-2">PROJETS RÉCENTS</p>
+<ul class="text-sm text-gray-600 space-y-1">
+<li class="flex items-center">
+<div class="w-3 h-3 flex items-center justify-center text-primary mr-1">
+<i class="ri-checkbox-circle-fill"></i>
+</div>
+E-commerce responsive avec React
+</li>
+<li class="flex items-center">
+<div class="w-3 h-3 flex items-center justify-center text-primary mr-1">
+<i class="ri-checkbox-circle-fill"></i>
+</div>
+Dashboard administrateur avec Next.js
+</li>
+<li class="flex items-center">
+<div class="w-3 h-3 flex items-center justify-center text-primary mr-1">
+<i class="ri-checkbox-circle-fill"></i>
+</div>
+API de gestion de contenu avec Node.js
+</li>
+</ul>
+</div>
+<div class="flex justify-between items-center">
+<span class="font-bold text-xl">65 €/h</span>
+<div class="flex space-x-2">
+<button class="w-10 h-10 border border-gray-200 !rounded-button flex items-center justify-center hover:bg-gray-50">
+<div class="w-5 h-5 flex items-center justify-center text-gray-500">
+<i class="ri-heart-line"></i>
+</div>
+</button>
+<a class="bg-primary text-white px-4 py-2 !rounded-button font-medium hover:bg-blue-600 transition-colors whitespace-nowrap" href="#">Contacter</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Developer Card 2 -->
+<div class="dev-card bg-white rounded shadow-md overflow-hidden border border-gray-100 hover:shadow-lg">
+<div class="p-5">
+<div class="flex items-start">
+<div class="w-20 h-20 rounded-full overflow-hidden mr-4">
+<img alt="Sophie Martin" class="w-full h-full object-cover object-top" src="https://readdy.ai/api/search-image?query=professional%2520portrait%2520of%2520a%2520young%2520French%2520woman%2520with%2520long%2520dark%2520hair%252C%2520wearing%2520a%2520professional%2520outfit%252C%2520neutral%2520expression%252C%2520clean%2520background%252C%2520high%2520quality%2520professional%2520headshot&amp;width=200&amp;height=200&amp;seq=102&amp;orientation=squarish"/>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start">
+<h3 class="font-bold text-lg">Sophie Martin</h3>
+<div class="flex items-center">
+<div class="w-4 h-4 flex items-center justify-center text-yellow-400 mr-1">
+<i class="ri-star-fill"></i>
+</div>
+<span class="text-sm text-gray-600">4.8</span>
+<span class="text-xs text-gray-500 ml-1">(36)</span>
+</div>
+</div>
+<p class="text-gray-600 text-sm">Développeuse Front-end</p>
+<div class="flex mt-2">
+<span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full flex items-center">
+<div class="w-3 h-3 bg-green-500 rounded-full mr-1"></div>
+Disponible
+</span>
+</div>
+</div>
+</div>
+<div class="mt-4">
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="bg-gray-100 text-gray-800 text-xs px-3 py-1 rounded-full">HTML/CSS</span>
+<span class="bg-gray-100 text-gray-800 text-xs px-3 py-1 rounded-full">Vue.js</span>
+<span class="bg-gray-100 text-gray-800 text-xs px-3 py-1 rounded-full">Tailwind</span>
+<span class="bg-gray-100 text-gray-800 text-xs px-3 py-1 rounded-full">Figma</span>
+</div>
+<p class="text-sm text-gray-600 mb-3">3 ans d'expérience en développement front-end. Passionnée par l'UI/UX et l'accessibilité web.</p>
+<div class="border-t border-gray-100 pt-3 mb-3">
+<p class="text-xs font-medium text-gray-500 mb-2">PROJETS RÉCENTS</p>
+<ul class="text-sm text-gray-600 space-y-1">
+<li class="flex items-center">
+<div class="w-3 h-3 flex items-center justify-center text-primary mr-1">
+<i class="ri-checkbox-circle-fill"></i>
+</div>
+Site vitrine pour une agence immobilière
+</li>
+<li class="flex items-center">
+<div class="w-3 h-3 flex items-center justify-center text-primary mr-1">
+<i class="ri-checkbox-circle-fill"></i>
+</div>
+Application de réservation avec Vue.js
+</li>
+<li class="flex items-center">
+<div class="w-3 h-3 flex items-center justify-center text-primary mr-1">
+<i class="ri-checkbox-circle-fill"></i>
+</div>
+Refonte UI d'une plateforme éducative
+</li>
+</ul>
+</div>
+<div class="flex justify-between items-center">
+<span class="font-bold text-xl">55 €/h</span>
+<div class="flex space-x-2">
+<button class="w-10 h-10 border border-gray-200 !rounded-button flex items-center justify-center hover:bg-gray-50">
+<div class="w-5 h-5 flex items-center justify-center text-gray-500">
+<i class="ri-heart-line"></i>
+</div>
+</button>
+<a class="bg-primary text-white px-4 py-2 !rounded-button font-medium hover:bg-blue-600 transition-colors whitespace-nowrap" href="#">Contacter</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Developer Card 3 -->
+<div class="dev-card bg-white rounded shadow-md overflow-hidden border border-gray-100 hover:shadow-lg">
+<div class="p-5">
+<div class="flex items-start">
+<div class="w-20 h-20 rounded-full overflow-hidden mr-4">
+<img alt="Thomas Leroy" class="w-full h-full object-cover object-top" src="https://readdy.ai/api/search-image?query=professional%2520portrait%2520of%2520a%2520middle-aged%2520French%2520man%2520with%2520beard%252C%2520wearing%2520a%2520casual%2520professional%2520outfit%252C%2520neutral%2520expression%252C%2520clean%2520background%252C%2520high%2520quality%2520professional%2520headshot&amp;width=200&amp;height=200&amp;seq=103&amp;orientation=squarish"/>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start">
+<h3 class="font-bold text-lg">Thomas Leroy</h3>
+<div class="flex items-center">
+<div class="w-4 h-4 flex items-center justify-center text-yellow-400 mr-1">
+<i class="ri-star-fill"></i>
+</div>
+<span class="text-sm text-gray-600">4.7</span>
+<span class="text-xs text-gray-500 ml-1">(52)</span>
+</div>
+</div>
+<p class="text-gray-600 text-sm">Développeur Back-end</p>
+<div class="flex mt-2">
+<span class="bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded-full flex items-center">
+<div class="w-3 h-3 bg-yellow-500 rounded-full mr-1"></div>
+Dispo. partielle
+</span>
+</div>
+</div>
+</div>
+<div class="mt-4">
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="bg-gray-100 text-gray-800 text-xs px-3 py-1 rounded-full">PHP</span>
+<span class="bg-gray-100 text-gray-800 text-xs px-3 py-1 rounded-full">Laravel</span>
+<span class="bg-gray-100 text-gray-800 text-xs px-3 py-1 rounded-full">MySQL</span>
+<span class="bg-gray-100 text-gray-800 text-xs px-3 py-1 rounded-full">API</span>
+</div>
+<p class="text-sm text-gray-600 mb-3">8 ans d'expérience en développement back-end. Expert en architecture de bases de données et sécurité.</p>
+<div class="border-t border-gray-100 pt-3 mb-3">
+<p class="text-xs font-medium text-gray-500 mb-2">PROJETS RÉCENTS</p>
+<ul class="text-sm text-gray-600 space-y-1">
+<li class="flex items-center">
+<div class="w-3 h-3 flex items-center justify-center text-primary mr-1">
+<i class="ri-checkbox-circle-fill"></i>
+</div>
+Système de paiement sécurisé avec Stripe
+</li>
+<li class="flex items-center">
+<div class="w-3 h-3 flex items-center justify-center text-primary mr-1">
+<i class="ri-checkbox-circle-fill"></i>
+</div>
+API pour application mobile de livraison
+</li>
+<li class="flex items-center">
+<div class="w-3 h-3 flex items-center justify-center text-primary mr-1">
+<i class="ri-checkbox-circle-fill"></i>
+</div>
+Migration de base de données legacy
+</li>
+</ul>
+</div>
+<div class="flex justify-between items-center">
+<span class="font-bold text-xl">75 €/h</span>
+<div class="flex space-x-2">
+<button class="w-10 h-10 border border-gray-200 !rounded-button flex items-center justify-center hover:bg-gray-50">
+<div class="w-5 h-5 flex items-center justify-center text-gray-500">
+<i class="ri-heart-line"></i>
+</div>
+</button>
+<a class="bg-primary text-white px-4 py-2 !rounded-button font-medium hover:bg-blue-600 transition-colors whitespace-nowrap" href="#">Contacter</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Developer Card 4 -->
+<div class="dev-card bg-white rounded shadow-md overflow-hidden border border-gray-100 hover:shadow-lg">
+<div class="p-5">
+<div class="flex items-start">
+<div class="w-20 h-20 rounded-full overflow-hidden mr-4">
+<img alt="Camille Bernard" class="w-full h-full object-cover object-top" src="https://readdy.ai/api/search-image?query=professional%2520portrait%2520of%2520a%2520young%2520French%2520woman%2520with%2520short%2520blonde%2520hair%252C%2520wearing%2520a%2520casual%2520professional%2520outfit%252C%2520neutral%2520expression%252C%2520clean%2520background%252C%2520high%2520quality%2520professional%2520headshot&amp;width=200&amp;height=200&amp;seq=104&amp;orientation=squarish"/>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start">
+<h3 class="font-bold text-lg">Camille Bernard</h3>
+<div class="flex items-center">
+<div class="w-4 h-4 flex items-center justify-center text-yellow-400 mr-1">
+<i class="ri-star-fill"></i>
+</div>
+<span class="text-sm text-gray-600">5.0</span>
+<span class="text-xs text-gray-500 ml-1">(29)</span>
+</div>
+</div>
+<p class="text-gray-600 text-sm">Développeuse Mobile</p>
+<div class="flex mt-2">
+<span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full flex items-center">
+<div class="w-3 h-3 bg-green-500 rounded-full mr-1"></div>
+Disponible
+</span>
+</div>
+</div>
+</div>
+<div class="mt-4">
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="bg-gray-100 text-gray-800 text-xs px-3 py-1 rounded-full">React Native</span>
+<span class="bg-gray-100 text-gray-800 text-xs px-3 py-1 rounded-full">Flutter</span>
+<span class="bg-gray-100 text-gray-800 text-xs px-3 py-1 rounded-full">Swift</span>
+<span class="bg-gray-100 text-gray-800 text-xs px-3 py-1 rounded-full">Firebase</span>
+</div>
+<p class="text-sm text-gray-600 mb-3">4 ans d'expérience en développement mobile. Spécialisée dans les applications cross-platform.</p>
+<div class="border-t border-gray-100 pt-3 mb-3">
+<p class="text-xs font-medium text-gray-500 mb-2">PROJETS RÉCENTS</p>
+<ul class="text-sm text-gray-600 space-y-1">
+<li class="flex items-center">
+<div class="w-3 h-3 flex items-center justify-center text-primary mr-1">
+<i class="ri-checkbox-circle-fill"></i>
+</div>
+Application de fitness avec suivi GPS
+</li>
+<li class="flex items-center">
+<div class="w-3 h-3 flex items-center justify-center text-primary mr-1">
+<i class="ri-checkbox-circle-fill"></i>
+</div>
+Application de livraison de repas
+</li>
+<li class="flex items-center">
+<div class="w-3 h-3 flex items-center justify-center text-primary mr-1">
+<i class="ri-checkbox-circle-fill"></i>
+</div>
+Application bancaire avec authentification
+</li>
+</ul>
+</div>
+<div class="flex justify-between items-center">
+<span class="font-bold text-xl">70 €/h</span>
+<div class="flex space-x-2">
+<button class="w-10 h-10 border border-gray-200 !rounded-button flex items-center justify-center hover:bg-gray-50">
+<div class="w-5 h-5 flex items-center justify-center text-gray-500">
+<i class="ri-heart-line"></i>
+</div>
+</button>
+<a class="bg-primary text-white px-4 py-2 !rounded-button font-medium hover:bg-blue-600 transition-colors whitespace-nowrap" href="#">Contacter</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Developer Card 5 -->
+<div class="dev-card bg-white rounded shadow-md overflow-hidden border border-gray-100 hover:shadow-lg">
+<div class="p-5">
+<div class="flex items-start">
+<div class="w-20 h-20 rounded-full overflow-hidden mr-4">
+<img alt="Nicolas Petit" class="w-full h-full object-cover object-top" src="https://readdy.ai/api/search-image?query=professional%2520portrait%2520of%2520a%2520young%2520French%2520man%2520with%2520dark%2520hair%252C%2520wearing%2520a%2520casual%2520professional%2520outfit%252C%2520neutral%2520expression%252C%2520clean%2520background%252C%2520high%2520quality%2520professional%2520headshot&amp;width=200&amp;height=200&amp;seq=105&amp;orientation=squarish"/>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start">
+<h3 class="font-bold text-lg">Nicolas Petit</h3>
+<div class="flex items-center">
+<div class="w-4 h-4 flex items-center justify-center text-yellow-400 mr-1">
+<i class="ri-star-fill"></i>
+</div>
+<span class="text-sm text-gray-600">4.6</span>
+<span class="text-xs text-gray-500 ml-1">(33)</span>
+</div>
+</div>
+<p class="text-gray-600 text-sm">Développeur WordPress</p>
+<div class="flex mt-2">
+<span class="bg-red-100 text-red-800 text-xs px-2 py-1 rounded-full flex items-center">
+<div class="w-3 h-3 bg-red-500 rounded-full mr-1"></div>
+Non disponible
+</span>
+</div>
+</div>
+</div>
+<div class="mt-4">
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="bg-gray-100 text-gray-800 text-xs px-3 py-1 rounded-full">WordPress</span>
+<span class="bg-gray-100 text-gray-800 text-xs px-3 py-1 rounded-full">PHP</span>
+<span class="bg-gray-100 text-gray-800 text-xs px-3 py-1 rounded-full">WooCommerce</span>
+<span class="bg-gray-100 text-gray-800 text-xs px-3 py-1 rounded-full">SEO</span>
+</div>
+<p class="text-sm text-gray-600 mb-3">6 ans d'expérience en développement WordPress. Expert en création de thèmes et plugins sur mesure.</p>
+<div class="border-t border-gray-100 pt-3 mb-3">
+<p class="text-xs font-medium text-gray-500 mb-2">PROJETS RÉCENTS</p>
+<ul class="text-sm text-gray-600 space-y-1">
+<li class="flex items-center">
+<div class="w-3 h-3 flex items-center justify-center text-primary mr-1">
+<i class="ri-checkbox-circle-fill"></i>
+</div>
+E-commerce avec WooCommerce
+</li>
+<li class="flex items-center">
+<div class="w-3 h-3 flex items-center justify-center text-primary mr-1">
+<i class="ri-checkbox-circle-fill"></i>
+</div>
+Plugin de réservation personnalisé
+</li>
+<li class="flex items-center">
+<div class="w-3 h-3 flex items-center justify-center text-primary mr-1">
+<i class="ri-checkbox-circle-fill"></i>
+</div>
+Thème multilingue pour agence
+</li>
+</ul>
+</div>
+<div class="flex justify-between items-center">
+<span class="font-bold text-xl">60 €/h</span>
+<div class="flex space-x-2">
+<button class="w-10 h-10 border border-gray-200 !rounded-button flex items-center justify-center hover:bg-gray-50">
+<div class="w-5 h-5 flex items-center justify-center text-gray-500">
+<i class="ri-heart-line"></i>
+</div>
+</button>
+<a class="bg-gray-200 text-gray-500 px-4 py-2 !rounded-button font-medium cursor-not-allowed whitespace-nowrap" href="#">Contacter</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Developer Card 6 -->
+<div class="dev-card bg-white rounded shadow-md overflow-hidden border border-gray-100 hover:shadow-lg">
+<div class="p-5">
+<div class="flex items-start">
+<div class="w-20 h-20 rounded-full overflow-hidden mr-4">
+<img alt="Marie Dubois" class="w-full h-full object-cover object-top" src="https://readdy.ai/api/search-image?query=professional%2520portrait%2520of%2520a%2520middle-aged%2520French%2520woman%2520with%2520curly%2520hair%252C%2520wearing%2520a%2520professional%2520outfit%252C%2520neutral%2520expression%252C%2520clean%2520background%252C%2520high%2520quality%2520professional%2520headshot&amp;width=200&amp;height=200&amp;seq=106&amp;orientation=squarish"/>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start">
+<h3 class="font-bold text-lg">Marie Dubois</h3>
+<div class="flex items-center">
+<div class="w-4 h-4 flex items-center justify-center text-yellow-400 mr-1">
+<i class="ri-star-fill"></i>
+</div>
+<span class="text-sm text-gray-600">4.9</span>
+<span class="text-xs text-gray-500 ml-1">(41)</span>
+</div>
+</div>
+<p class="text-gray-600 text-sm">Développeuse UI/UX</p>
+<div class="flex mt-2">
+<span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full flex items-center">
+<div class="w-3 h-3 bg-green-500 rounded-full mr-1"></div>
+Disponible
+</span>
+</div>
+</div>
+</div>
+<div class="mt-4">
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="bg-gray-100 text-gray-800 text-xs px-3 py-1 rounded-full">Figma</span>
+<span class="bg-gray-100 text-gray-800 text-xs px-3 py-1 rounded-full">HTML/CSS</span>
+<span class="bg-gray-100 text-gray-800 text-xs px-3 py-1 rounded-full">JavaScript</span>
+<span class="bg-gray-100 text-gray-800 text-xs px-3 py-1 rounded-full">UX Research</span>
+</div>
+<p class="text-sm text-gray-600 mb-3">7 ans d'expérience en design d'interface et développement front-end. Spécialisée en expérience utilisateur.</p>
+<div class="border-t border-gray-100 pt-3 mb-3">
+<p class="text-xs font-medium text-gray-500 mb-2">PROJETS RÉCENTS</p>
+<ul class="text-sm text-gray-600 space-y-1">
+<li class="flex items-center">
+<div class="w-3 h-3 flex items-center justify-center text-primary mr-1">
+<i class="ri-checkbox-circle-fill"></i>
+</div>
+Refonte UX d'une application bancaire
+</li>
+<li class="flex items-center">
+<div class="w-3 h-3 flex items-center justify-center text-primary mr-1">
+<i class="ri-checkbox-circle-fill"></i>
+</div>
+Design system pour startup SaaS
+</li>
+<li class="flex items-center">
+<div class="w-3 h-3 flex items-center justify-center text-primary mr-1">
+<i class="ri-checkbox-circle-fill"></i>
+</div>
+Prototype d'application de santé
+</li>
+</ul>
+</div>
+<div class="flex justify-between items-center">
+<span class="font-bold text-xl">80 €/h</span>
+<div class="flex space-x-2">
+<button class="w-10 h-10 border border-gray-200 !rounded-button flex items-center justify-center hover:bg-gray-50">
+<div class="w-5 h-5 flex items-center justify-center text-gray-500">
+<i class="ri-heart-line"></i>
+</div>
+</button>
+<a class="bg-primary text-white px-4 py-2 !rounded-button font-medium hover:bg-blue-600 transition-colors whitespace-nowrap" href="#">Contacter</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Pagination -->
+<div class="mt-12 flex flex-col md:flex-row justify-between items-center">
+<div class="mb-4 md:mb-0">
+<span class="text-sm text-gray-600">Affichage de 1-6 sur 186 développeurs</span>
+</div>
+<div class="flex items-center">
+<div class="mr-4">
+<select class="px-3 py-2 border border-gray-300 !rounded-button text-sm text-gray-800 pr-8 appearance-none">
+<option value="12">12 par page</option>
+<option value="24">24 par page</option>
+<option value="48">48 par page</option>
+</select>
+</div>
+<div class="flex">
+<a class="w-10 h-10 flex items-center justify-center border border-gray-300 !rounded-button mr-2 text-gray-500 hover:bg-gray-50" href="#">
+<div class="w-4 h-4 flex items-center justify-center">
+<i class="ri-arrow-left-s-line"></i>
+</div>
+</a>
+<a class="w-10 h-10 flex items-center justify-center border border-gray-300 !rounded-button mr-2 bg-primary text-white hover:bg-blue-600" href="#">1</a>
+<a class="w-10 h-10 flex items-center justify-center border border-gray-300 !rounded-button mr-2 text-gray-700 hover:bg-gray-50" href="#">2</a>
+<a class="w-10 h-10 flex items-center justify-center border border-gray-300 !rounded-button mr-2 text-gray-700 hover:bg-gray-50" href="#">3</a>
+<span class="w-10 h-10 flex items-center justify-center text-gray-500">...</span>
+<a class="w-10 h-10 flex items-center justify-center border border-gray-300 !rounded-button mr-2 text-gray-700 hover:bg-gray-50" href="#">16</a>
+<a class="w-10 h-10 flex items-center justify-center border border-gray-300 !rounded-button text-gray-500 hover:bg-gray-50" href="#">
+<div class="w-4 h-4 flex items-center justify-center">
+<i class="ri-arrow-right-s-line"></i>
+</div>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-gray-900 text-white py-12 px-6">
+<div class="container mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-10">
+<div>
+<h3 class="text-xl font-bold mb-4 font-['Pacifico']">Tekko-Fii</h3>
+<p class="text-gray-400 mb-6">La marketplace qui connecte développeurs et entreprises.</p>
+<div class="flex space-x-4">
+<a class="text-gray-400 hover:text-white" href="#">
+<div class="w-10 h-10 flex items-center justify-center">
+<i class="ri-twitter-x-line ri-lg"></i>
+</div>
+</a>
+<a class="text-gray-400 hover:text-white" href="#">
+<div class="w-10 h-10 flex items-center justify-center">
+<i class="ri-linkedin-line ri-lg"></i>
+</div>
+</a>
+<a class="text-gray-400 hover:text-white" href="#">
+<div class="w-10 h-10 flex items-center justify-center">
+<i class="ri-github-line ri-lg"></i>
+</div>
+</a>
+</div>
+</div>
+<div>
+<h4 class="text-lg font-semibold mb-4">Liens rapides</h4>
+<ul class="space-y-2">
+<li><a class="text-gray-400 hover:text-white" href="#">Développeurs populaires</a></li>
+<li><a class="text-gray-400 hover:text-white" href="#">Nouveaux talents</a></li>
+<li><a class="text-gray-400 hover:text-white" href="#">Projets disponibles</a></li>
+<li><a class="text-gray-400 hover:text-white" href="#">Blog</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-lg font-semibold mb-4">Ressources</h4>
+<ul class="space-y-2">
+<li><a class="text-gray-400 hover:text-white" href="#">Documentation</a></li>
+<li><a class="text-gray-400 hover:text-white" href="#">Guide du développeur</a></li>
+<li><a class="text-gray-400 hover:text-white" href="#">FAQ</a></li>
+<li><a class="text-gray-400 hover:text-white" href="#">Support</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-lg font-semibold mb-4">Légal</h4>
+<ul class="space-y-2">
+<li><a class="text-gray-400 hover:text-white" href="#">Conditions d'utilisation</a></li>
+<li><a class="text-gray-400 hover:text-white" href="#">Politique de confidentialité</a></li>
+<li><a class="text-gray-400 hover:text-white" href="#">Licences</a></li>
+<li><a class="text-gray-400 hover:text-white" href="#">Cookies</a></li>
+</ul>
+</div>
+</div>
+<div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+<p class="text-gray-400 mb-4 md:mb-0">© 2025 Tekko-Fii. Tous droits réservés.</p>
+<div class="flex items-center space-x-4">
+<div class="text-gray-400 flex items-center">
+<div class="w-8 h-8 flex items-center justify-center">
+<i class="ri-visa-fill ri-lg"></i>
+</div>
+<div class="w-8 h-8 flex items-center justify-center">
+<i class="ri-mastercard-fill ri-lg"></i>
+</div>
+<div class="w-8 h-8 flex items-center justify-center">
+<i class="ri-paypal-fill ri-lg"></i>
+</div>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+// Skills dropdown toggle
+const skillsFilterBtn = document.getElementById('skillsFilterBtn');
+const skillsDropdown = document.getElementById('skillsDropdown');
+skillsFilterBtn.addEventListener('click', function() {
+skillsDropdown.classList.toggle('hidden');
+});
+// Close dropdown when clicking outside
+document.addEventListener('click', function(event) {
+if (!skillsFilterBtn.contains(event.target) && !skillsDropdown.contains(event.target)) {
+skillsDropdown.classList.add('hidden');
+}
+});
+// Rate range slider
+const rateRange = document.getElementById('rateRange');
+const rateValue = document.getElementById('rateValue');
+rateRange.addEventListener('input', function() {
+rateValue.textContent = this.value + ' €/h';
+});
+// Skills checkboxes
+const skillCheckboxes = document.querySelectorAll('#skillsDropdown input[type="checkbox"]');
+skillCheckboxes.forEach(checkbox => {
+checkbox.addEventListener('change', function() {
+updateSkillsFilterLabel();
+});
+});
+function updateSkillsFilterLabel() {
+const selectedSkills = Array.from(skillCheckboxes)
+.filter(cb => cb.checked)
+.map(cb => cb.value);
+if (selectedSkills.length === 0) {
+skillsFilterBtn.querySelector('span').textContent = 'Sélectionner';
+} else if (selectedSkills.length === 1) {
+skillsFilterBtn.querySelector('span').textContent = selectedSkills[0];
+} else {
+skillsFilterBtn.querySelector('span').textContent = `${selectedSkills.length} sélectionnés`;
+}
+}
+// Search functionality
+const searchBtn = document.getElementById('searchBtn');
+const searchInput = document.getElementById('searchInput');
+const developersGrid = document.getElementById('developersGrid');
+searchBtn.addEventListener('click', function() {
+    // Save original button content
+    const originalContent = searchBtn.innerHTML;
+    
+    // Show loading state
+    searchBtn.innerHTML = `
+        <div class="flex items-center">
+            <div class="w-4 h-4 flex items-center justify-center animate-spin mr-2">
+                <i class="ri-loader-4-line"></i>
+            </div>
+            <span>Recherche...</span>
+        </div>
+    `;
+    searchBtn.disabled = true;
+    
+    const searchQuery = searchInput.value.toLowerCase();
+    
+    // Simulate API delay
+    setTimeout(() => {
+        const devCards = developersGrid.getElementsByClassName('dev-card');
+        
+        Array.from(devCards).forEach(card => {
+            const name = card.querySelector('h3').textContent.toLowerCase();
+            const skills = Array.from(card.querySelectorAll('.flex-wrap span'))
+                .map(span => span.textContent.toLowerCase());
+            const description = card.querySelector('p.text-sm.text-gray-600').textContent.toLowerCase();
+            
+            const matchesSearch = name.includes(searchQuery) || 
+                skills.some(skill => skill.includes(searchQuery)) ||
+                description.includes(searchQuery);
+            
+            if (matchesSearch) {
+                card.style.display = '';
+                card.style.opacity = '0';
+                setTimeout(() => {
+                    card.style.transition = 'opacity 0.3s ease-in-out';
+                    card.style.opacity = '1';
+                }, 50);
+            } else {
+                card.style.display = 'none';
+            }
+        });
+        
+        // Reset button state
+        setTimeout(() => {
+            searchBtn.innerHTML = originalContent;
+            searchBtn.disabled = false;
+        }, 500);
+        
+        // Update results count
+        const visibleCards = Array.from(devCards).filter(card => card.style.display !== 'none').length;
+        const resultsCount = document.querySelector('.text-gray-600 span.font-medium');
+        if (resultsCount) {
+            resultsCount.textContent = visibleCards;
+        }
+    }, 800);
+});
+// Add search on Enter key
+searchInput.addEventListener('keypress', function(e) {
+    if (e.key === 'Enter') {
+        searchBtn.click();
+    }
+});
+// Availability toggle
+const availabilitySwitch = document.getElementById('availabilitySwitch');
+availabilitySwitch.addEventListener('change', function() {
+// Filter by availability logic here
+});
+});
+// Dans recherche-dev.html, compléter la fonction de filtrage par disponibilité
+availabilitySwitch.addEventListener('change', function() {
+    const devCards = developersGrid.getElementsByClassName('dev-card');
+    Array.from(devCards).forEach(card => {
+        const availability = card.querySelector('.flex.mt-2 span');
+        if (this.checked && !availability.textContent.includes('Disponible')) {
+            card.style.display = 'none';
+        } else {
+            card.style.display = '';
+        }
+    });
+});
+
+// Ajouter le tri des résultats
+document.getElementById('sortSelect').addEventListener('change', function() {
+    // Implémenter la logique de tri
+});
+</script>
+</body>
+</html>

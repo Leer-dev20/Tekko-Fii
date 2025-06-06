@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Tekko-Fii - Marketplace de projets de développeurs</title>
+<link href="img/Blue_Purple_Modern_Gradient_Computer_Service_and_Repair_Logo__1_-removebg-preview.png" rel="shortcut icon" type="image/x-icon"/>
+<link href="Tekko-Fii" rel="shortcut icon" type="image/x-icon"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+<link href="projet.html" rel="stylesheet"/>
+<link href="index.html" rel="stylesheet"/>
+<link href="developper.html" rel="stylesheet"/>
+<link href="entreprise.html" rel="stylesheet"/>
+<link href="recherche-dev.html" rel="stylesheet"/>
+<link href="inscrire.html" rel="stylesheet"/>
+<link href="connexion.html" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#4285F4',
+    secondary:'#34A853'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<style>
+        :where([class^="ri-"])::before { content: "\f3c2"; }
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .hero-bg {
+            background-image: url('img/7401d6ed8df947c91eb40ae9801a54eb.jpg');
+            background-size: cover;
+            background-position: right center;
+        }
+        .hero-overlay {
+            background: linear-gradient(90deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.9) 50%, rgba(255,255,255,0.5) 100%);
+        }
+        input:focus {
+            outline: none;
+        }
+    </style>
+<link href="style.css" rel="stylesheet"/><script defer="True" src="script.js"></script></head>
+<body class="bg-white min-h-screen">
+<!-- Header -->
+<header class="w-full py-4 px-6 flex justify-between items-center border-b border-gray-100 relative">
+<!-- Logo -->
+<div class="flex items-center">
+<a class="text-2xl font-bold font-['Pacifico'] text-gray-900" href="index.html">Tekko-Fii</a>
+</div>
+<!-- Bouton Hamburger (visible uniquement sur petit écran) -->
+<button class="md:hidden text-gray-700 focus:outline-none" id="menu-toggle">
+<i class="ri-menu-line text-2xl"></i>
+</button>
+<!-- Navigation (menu de base) -->
+<div class="hidden md:flex items-center space-x-8">
+<nav class="flex space-x-8">
+<a class="text-gray-800 hover:text-primary font-medium" href="projet.html">Projets</a>
+<a class="text-gray-800 hover:text-primary font-medium" href="developper.html">Développeurs</a>
+<a class="text-gray-800 hover:text-primary font-medium" href="entreprise.html">Entreprise</a>
+</nav>
+<div class="flex items-center space-x-4">
+<a class="text-gray-800 hover:text-primary font-medium whitespace-nowrap" href="inscrire.html">S'inscrire</a>
+<a class="bg-primary text-white px-5 py-2 !rounded-button font-medium hover:bg-blue-600 transition-colors whitespace-nowrap" href="connexion.html">Se connecter</a>
+</div>
+</div>
+<!-- Menu mobile déroulant -->
+<div class="hidden absolute top-full left-0 w-full bg-white shadow-md md:hidden z-50 px-6 py-4" id="mobile-menu">
+<nav class="flex flex-col space-y-4">
+<a class="text-gray-800 hover:text-primary font-medium" href="projet.html">Projets</a>
+<a class="text-gray-800 hover:text-primary font-medium" href="developper.html">Développeurs</a>
+<a class="text-gray-800 hover:text-primary font-medium" href="entreprise.html">Entreprise</a>
+<a class="text-gray-800 hover:text-primary font-medium" href="inscrire.html">S'inscrire</a>
+<a class="text-primary font-medium" href="connexion.html">Se connecter</a>
+</nav>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="hero-bg w-full relative">
+<div class="hero-overlay w-full">
+<div class="container mx-auto px-6 py-20 md:py-28">
+<div class="max-w-3xl">
+<h1 class="text-5xl md:text-6xl font-bold text-gray-900 mb-6">Dépose le ici</h1>
+<p class="text-xl text-gray-700 mb-8 leading-relaxed">
+                        Marketplace de projets de développeurs. Achetez et vendez des applications, des sites web, des morceaux de code, et plus encore.
+                    </p>
+<a class="inline-block bg-primary text-white px-8 py-4 !rounded-button font-medium text-lg hover:bg-blue-600 transition-colors whitespace-nowrap" href="parcourir.html">Parcourir</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Featured Projects -->
+<section class="py-16 px-6">
+<div class="container mx-auto">
+<h2 class="text-3xl font-bold text-gray-900 mb-10">Projets en vedette</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Project Card 1 -->
+<div class="bg-white rounded shadow-md overflow-hidden border border-gray-100 hover:shadow-lg transition-shadow">
+<div class="h-48 bg-gray-100 overflow-hidden">
+<img alt="E-commerce App" class="w-full h-full object-cover object-top" src="img/projetcard1.jpg"/>
+</div>
+<div class="p-5">
+<h3 class="font-bold text-lg mb-2">E-commerce App</h3>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="bg-gray-100 text-gray-800 text-xs px-3 py-1 rounded-full">React</span>
+<span class="bg-gray-100 text-gray-800 text-xs px-3 py-1 rounded-full">Node.js</span>
+</div>
+<div class="flex justify-end">
+<span class="font-bold text-xl">1.625 MAD</span>
+</div>
+</div>
+</div>
+<!-- Project Card 2 -->
+<div class="bg-white rounded shadow-md overflow-hidden border border-gray-100 hover:shadow-lg transition-shadow">
+<div class="h-48 bg-gray-100 overflow-hidden">
+<img class="w-full h-full object-cover object-top" src="img/projetcard2.jpg"/>
+</div>
+<div class="p-5">
+<h3 class="font-bold text-lg mb-2">Outil de Gestion de Projet</h3>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="bg-gray-100 text-gray-800 text-xs px-3 py-1 rounded-full">Vue</span>
+<span class="bg-gray-100 text-gray-800 text-xs px-3 py-1 rounded-full">Django</span>
+</div>
+<div class="flex justify-end">
+<span class="font-bold text-xl">2.166 MAD</span>
+</div>
+</div>
+</div>
+<!-- Project Card 3 -->
+<div class="bg-white rounded shadow-md overflow-hidden border border-gray-100 hover:shadow-lg transition-shadow">
+<div class="h-48 bg-gray-100 overflow-hidden">
+<img class="w-full h-full object-cover object-top" src="img/projetcard3.jpg"/>
+</div>
+<div class="p-5">
+<h3 class="font-bold text-lg mb-2">Plateforme de Réseau Social</h3>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="bg-gray-100 text-gray-800 text-xs px-3 py-1 rounded-full">Angular</span>
+<span class="bg-gray-100 text-gray-800 text-xs px-3 py-1 rounded-full">Firebase</span>
+</div>
+<div class="flex justify-end">
+<span class="font-bold text-xl">3.250 MAD</span>
+</div>
+</div>
+</div>
+<!-- Project Card 4 -->
+<div class="bg-white rounded shadow-md overflow-hidden border border-gray-100 hover:shadow-lg transition-shadow">
+<div class="h-48 bg-gray-100 overflow-hidden">
+<img class="w-full h-full object-cover object-top" src="img/projetcard4.jpg"/>
+</div>
+<div class="p-5">
+<h3 class="font-bold text-lg mb-2">Site Portfolio</h3>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="bg-gray-100 text-gray-800 text-xs px-3 py-1 rounded-full">HTML</span>
+<span class="bg-gray-100 text-gray-800 text-xs px-3 py-1 rounded-full">CSS</span>
+<span class="bg-gray-100 text-gray-800 text-xs px-3 py-1 rounded-full">JS</span>
+</div>
+<div class="flex justify-end">
+<span class="font-bold text-xl">540 MAD</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Categories Section -->
+<section class="py-16 px-6 bg-gray-50">
+<div class="container mx-auto">
+<h2 class="text-3xl font-bold text-gray-900 mb-10">Catégories populaires</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+<a class="bg-white p-6 rounded shadow-sm hover:shadow-md transition-shadow flex flex-col items-center text-center" href="#">
+<div class="w-16 h-16 flex items-center justify-center mb-4 text-primary">
+<i class="ri-store-2-line ri-2x"></i>
+</div>
+<h3 class="font-bold text-lg mb-2">E-commerce</h3>
+<p class="text-gray-600">Solutions complètes pour boutiques en ligne</p>
+</a>
+<a class="bg-white p-6 rounded shadow-sm hover:shadow-md transition-shadow flex flex-col items-center text-center" href="#">
+<div class="w-16 h-16 flex items-center justify-center mb-4 text-primary">
+<i class="ri-smartphone-line ri-2x"></i>
+</div>
+<h3 class="font-bold text-lg mb-2">Applications Mobiles</h3>
+<p class="text-gray-600">Apps iOS et Android prêtes à l'emploi</p>
+</a>
+<a class="bg-white p-6 rounded shadow-sm hover:shadow-md transition-shadow flex flex-col items-center text-center" href="#">
+<div class="w-16 h-16 flex items-center justify-center mb-4 text-primary">
+<i class="ri-code-box-line ri-2x"></i>
+</div>
+<h3 class="font-bold text-lg mb-2">Plugins &amp; Extensions</h3>
+<p class="text-gray-600">Modules complémentaires pour CMS et frameworks</p>
+</a>
+<a class="bg-white p-6 rounded shadow-sm hover:shadow-md transition-shadow flex flex-col items-center text-center" href="#">
+<div class="w-16 h-16 flex items-center justify-center mb-4 text-primary">
+<i class="ri-dashboard-line ri-2x"></i>
+</div>
+<h3 class="font-bold text-lg mb-2">Tableaux de Bord</h3>
+<p class="text-gray-600">Interfaces d'administration et analytics</p>
+</a>
+</div>
+</div>
+</section>
+<!-- How It Works -->
+<section class="py-16 px-6">
+<div class="container mx-auto">
+<h2 class="text-3xl font-bold text-gray-900 mb-10 text-center">Comment ça marche</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+<div class="flex flex-col items-center text-center">
+<div class="w-20 h-20 flex items-center justify-center bg-blue-100 rounded-full mb-6 text-primary">
+<i class="ri-user-search-line ri-2x"></i>
+</div>
+<h3 class="font-bold text-xl mb-3">Parcourez</h3>
+<p class="text-gray-600">Explorez notre catalogue de projets numériques classés par catégorie et technologie.</p>
+</div>
+<div class="flex flex-col items-center text-center">
+<div class="w-20 h-20 flex items-center justify-center bg-blue-100 rounded-full mb-6 text-primary">
+<i class="ri-shopping-cart-line ri-2x"></i>
+</div>
+<h3 class="font-bold text-xl mb-3">Achetez</h3>
+<p class="text-gray-600">Achetez des projets complets avec documentation et support du développeur.</p>
+</div>
+<div class="flex flex-col items-center text-center">
+<div class="w-20 h-20 flex items-center justify-center bg-blue-100 rounded-full mb-6 text-primary">
+<i class="ri-upload-cloud-line ri-2x"></i>
+</div>
+<h3 class="font-bold text-xl mb-3">Vendez</h3>
+<p class="text-gray-600">Publiez vos propres projets et générez des revenus passifs de votre travail.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Newsletter -->
+<section class="py-16 px-6 bg-gray-50">
+<div class="container mx-auto max-w-3xl text-center">
+<h2 class="text-3xl font-bold text-gray-900 mb-4">Restez informé</h2>
+<p class="text-gray-600 mb-8">Recevez nos dernières mises à jour et les nouveaux projets directement dans votre boîte mail.</p>
+<form class="flex flex-col md:flex-row gap-4 max-w-lg mx-auto">
+<input class="flex-1 px-4 py-3 border border-gray-300 rounded focus:border-primary text-gray-800" placeholder="Votre adresse email" type="email"/>
+<button class="bg-primary text-white px-6 py-3 !rounded-button font-medium hover:bg-blue-600 transition-colors whitespace-nowrap" type="submit">S'abonner</button>
+</form>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-gray-900 text-white py-12 px-6">
+<div class="container mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-10">
+<div>
+<h3 class="text-xl font-bold mb-4 font-['Pacifico']">Tekko-Fii</h3>
+<p class="text-gray-400 mb-6">La marketplace qui connecte développeurs et entreprises.</p>
+<div class="flex space-x-4">
+<a class="text-gray-400 hover:text-white" href="#">
+<div class="w-10 h-10 flex items-center justify-center">
+<i class="ri-twitter-x-line ri-lg"></i>
+</div>
+</a>
+<a class="text-gray-400 hover:text-white" href="#">
+<div class="w-10 h-10 flex items-center justify-center">
+<i class="ri-linkedin-line ri-lg"></i>
+</div>
+</a>
+<a class="text-gray-400 hover:text-white" href="#">
+<div class="w-10 h-10 flex items-center justify-center">
+<i class="ri-github-line ri-lg"></i>
+</div>
+</a>
+</div>
+</div>
+<div>
+<h4 class="text-lg font-semibold mb-4">Liens rapides</h4>
+<ul class="space-y-2">
+<li><a class="text-gray-400 hover:text-white" href="#">Projets populaires</a></li>
+<li><a class="text-gray-400 hover:text-white" href="#">Nouvelles arrivées</a></li>
+<li><a class="text-gray-400 hover:text-white" href="#">Développeurs vérifiés</a></li>
+<li><a class="text-gray-400 hover:text-white" href="#">Blog</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-lg font-semibold mb-4">Ressources</h4>
+<ul class="space-y-2">
+<li><a class="text-gray-400 hover:text-white" href="#">Documentation</a></li>
+<li><a class="text-gray-400 hover:text-white" href="#">Guide du vendeur</a></li>
+<li><a class="text-gray-400 hover:text-white" href="#">FAQ</a></li>
+<li><a class="text-gray-400 hover:text-white" href="#">Support</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-lg font-semibold mb-4">Légal</h4>
+<ul class="space-y-2">
+<li><a class="text-gray-400 hover:text-white" href="#">Conditions d'utilisation</a></li>
+<li><a class="text-gray-400 hover:text-white" href="#">Politique de confidentialité</a></li>
+<li><a class="text-gray-400 hover:text-white" href="#">Licences</a></li>
+<li><a class="text-gray-400 hover:text-white" href="#">Cookies</a></li>
+</ul>
+</div>
+</div>
+<div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+<p class="text-gray-400 mb-4 md:mb-0">© 2025 Tekko-Fii. Tous droits réservés.</p>
+<div class="flex items-center space-x-4">
+<div class="text-gray-400 flex items-center">
+<i class="ri-visa-line ri-lg mr-2"></i>
+<i class="ri-mastercard-line ri-lg mr-2"></i>
+<i class="ri-paypal-line ri-lg"></i>
+</div>
+</div>
+</div>
+</div>
+</footer>
+</body>
+<!-- JS Bouton-Menu 3bars -->
+<script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const toggleBtn = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        toggleBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    });
+</script>
+</html>

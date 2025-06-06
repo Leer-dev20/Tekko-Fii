@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Tekko-Fii - Pour les Entreprises</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#4285F4',
+                        secondary: '#34A853'
+                    },
+                    borderRadius: {
+                        'none': '0px',
+                        'sm': '4px',
+                        DEFAULT: '8px',
+                        'md': '12px',
+                        'lg': '16px',
+                        'xl': '20px',
+                        '2xl': '24px',
+                        '3xl': '32px',
+                        'full': '9999px',
+                        'button': '8px'
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        :where([class^="ri-"])::before { content: "\f3c2"; }
+        body { font-family: 'Inter', sans-serif; }
+        input:focus { outline: none; }
+    </style>
+<link href="style.css" rel="stylesheet"/><script defer="True" src="script.js"></script></head>
+<body class="bg-white min-h-screen">
+<!-- Header -->
+<header class="w-full py-4 px-6 flex justify-between items-center border-b border-gray-100">
+<div class="flex items-center">
+<a class="text-2xl font-bold font-['Pacifico'] text-gray-900" href="index.html">Tekko-Fii</a>
+</div>
+<div class="flex items-center space-x-8">
+<nav class="hidden md:flex space-x-8">
+<a class="text-gray-800 hover:text-primary font-medium" href="projet.html">Projets</a>
+<a class="text-gray-800 hover:text-primary font-medium" href="developper.html">Développeurs</a>
+<a class="text-primary font-medium border-b-2 border-primary" href="entreprise.html">Entreprise</a>
+</nav>
+<div class="flex items-center space-x-4">
+<a class="text-gray-800 hover:text-primary font-medium whitespace-nowrap" href="inscrire.html">S'inscrire</a>
+<a class="bg-primary text-white px-5 py-2 !rounded-button font-medium hover:bg-blue-600 transition-colors whitespace-nowrap" href="connexion.html">Se connecter</a>
+</div>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="bg-gradient-to-r from-blue-50 to-indigo-50 py-16 px-6">
+<div class="container mx-auto text-center">
+<h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Recrutez les meilleurs talents tech</h1>
+<p class="text-xl text-gray-700 mb-8 max-w-3xl mx-auto">
+                Trouvez des développeurs qualifiés pour vos projets, en freelance ou en CDI, avec une gestion simplifiée.
+            </p>
+<a class="inline-block bg-primary text-white px-8 py-4 !rounded-button font-medium text-lg hover:bg-blue-600 transition-colors whitespace-nowrap" href="inscrire.html">Inscrivez votre entreprise</a>
+</div>
+</section>
+<!-- Benefits Section -->
+<section class="py-16 px-6">
+<div class="container mx-auto">
+<h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">Pourquoi choisir Tekko-Fii ?</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Benefit 1 -->
+<div class="bg-white p-8 rounded-lg shadow-md text-center">
+<div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+<i class="ri-user-search-line ri-2x text-primary"></i>
+</div>
+<h3 class="text-xl font-bold mb-3">Accès à des profils vérifiés</h3>
+<p class="text-gray-600">Tous nos développeurs sont testés sur leurs compétences techniques avant d'être approuvés.</p>
+</div>
+<!-- Benefit 2 -->
+<div class="bg-white p-8 rounded-lg shadow-md text-center">
+<div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+<i class="ri-24-hours-line ri-2x text-secondary"></i>
+</div>
+<h3 class="text-xl font-bold mb-3">Recrutement rapide</h3>
+<p class="text-gray-600">Trouvez le bon profil en moins de 72h grâce à notre moteur de recherche intelligent.</p>
+</div>
+<!-- Benefit 3 -->
+<div class="bg-white p-8 rounded-lg shadow-md text-center">
+<div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
+<i class="ri-shield-check-line ri-2x text-purple-600"></i>
+</div>
+<h3 class="text-xl font-bold mb-3">Paiement sécurisé</h3>
+<p class="text-gray-600">Gérez les paiements en toute sécurité avec notre système intégré et nos contrats types.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- How It Works -->
+<section class="py-16 px-6 bg-gray-50">
+<div class="container mx-auto">
+<h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">Comment ça marche ?</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Step 1 -->
+<div class="flex flex-col items-center text-center">
+<div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6 text-primary text-xl font-bold">1</div>
+<h3 class="font-bold text-xl mb-3">Créez votre compte entreprise</h3>
+<p class="text-gray-600">Inscrivez-vous gratuitement et décrivez vos besoins en recrutement.</p>
+</div>
+<!-- Step 2 -->
+<div class="flex flex-col items-center text-center">
+<div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6 text-primary text-xl font-bold">2</div>
+<h3 class="font-bold text-xl mb-3">Trouvez des développeurs</h3>
+<p class="text-gray-600">Utilisez nos filtres avancés pour trouver les talents qui correspondent à vos critères.</p>
+</div>
+<!-- Step 3 -->
+<div class="flex flex-col items-center text-center">
+<div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6 text-primary text-xl font-bold">3</div>
+<h3 class="font-bold text-xl mb-3">Collaborez en toute simplicité</h3>
+<p class="text-gray-600">Gérez les contrats, les paiements et les échanges depuis votre espace dédié.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="py-16 px-6">
+<div class="container mx-auto">
+<h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">Ils nous font confiance</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Testimonial 1 -->
+<div class="bg-white p-8 rounded-lg shadow-md">
+<div class="flex items-center mb-6">
+<img alt="Harik M." class="w-16 h-16 rounded-full mr-4" src=""/>
+<div>
+<h4 class="font-bold">Mohamed Harik</h4>
+<p class="text-gray-600">Directeur Digicrafts</p>
+</div>
+</div>
+<p class="text-gray-700 italic">"Grâce à Tekko-Fii, nous avons pu recruter 3 développeurs full-stack en moins de 2 semaines. La qualité des profils est vraiment au rendez-vous !"</p>
+</div>
+<!-- Testimonial 2 -->
+<div class="bg-white p-8 rounded-lg shadow-md">
+<div class="flex items-center mb-6">
+<img alt="Pierre L." class="w-16 h-16 rounded-full mr-4" src=""/>
+<div>
+<h4 class="font-bold">Mbaye SENE</h4>
+<p class="text-gray-600">Directeur Menuiserie Bawol </p>
+</div>
+</div>
+<p class="text-gray-700 italic">"La plateforme est intuitive et nous permet de gérer facilement nos freelances. Le système de paiement sécurisé est un vrai plus."</p>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-16 px-6 bg-primary text-white">
+<div class="container mx-auto text-center">
+<h2 class="text-3xl font-bold mb-6">Prêt à trouver vos prochains talents ?</h2>
+<p class="text-xl mb-8 max-w-2xl mx-auto">Rejoignez des centaines d'entreprises qui recrutent déjà sur Tekko-Fii.</p>
+<a class="inline-block bg-white text-primary px-8 py-4 !rounded-button font-medium text-lg hover:bg-gray-100 transition-colors whitespace-nowrap" href="inscrire.html">Commencer maintenant</a>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-gray-900 text-white py-12 px-6">
+<div class="container mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-10">
+<div>
+<h3 class="text-xl font-bold mb-4 font-['Pacifico']">Tekko-Fii</h3>
+<p class="text-gray-400 mb-6">La marketplace qui connecte développeurs et entreprises.</p>
+<div class="flex space-x-4">
+<a class="text-gray-400 hover:text-white" href="#">
+<div class="w-10 h-10 flex items-center justify-center">
+<i class="ri-twitter-x-line ri-lg"></i>
+</div>
+</a>
+<a class="text-gray-400 hover:text-white" href="#">
+<div class="w-10 h-10 flex items-center justify-center">
+<i class="ri-linkedin-line ri-lg"></i>
+</div>
+</a>
+<a class="text-gray-400 hover:text-white" href="#">
+<div class="w-10 h-10 flex items-center justify-center">
+<i class="ri-github-line ri-lg"></i>
+</div>
+</a>
+</div>
+</div>
+<div>
+<h4 class="text-lg font-semibold mb-4">Liens rapides</h4>
+<ul class="space-y-2">
+<li><a class="text-gray-400 hover:text-white" href="#">Projets populaires</a></li>
+<li><a class="text-gray-400 hover:text-white" href="#">Nouvelles arrivées</a></li>
+<li><a class="text-gray-400 hover:text-white" href="#">Développeurs vérifiés</a></li>
+<li><a class="text-gray-400 hover:text-white" href="#">Blog</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-lg font-semibold mb-4">Ressources</h4>
+<ul class="space-y-2">
+<li><a class="text-gray-400 hover:text-white" href="#">Documentation</a></li>
+<li><a class="text-gray-400 hover:text-white" href="#">Guide du vendeur</a></li>
+<li><a class="text-gray-400 hover:text-white" href="#">FAQ</a></li>
+<li><a class="text-gray-400 hover:text-white" href="#">Support</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-lg font-semibold mb-4">Légal</h4>
+<ul class="space-y-2">
+<li><a class="text-gray-400 hover:text-white" href="#">Conditions d'utilisation</a></li>
+<li><a class="text-gray-400 hover:text-white" href="#">Politique de confidentialité</a></li>
+<li><a class="text-gray-400 hover:text-white" href="#">Licences</a></li>
+<li><a class="text-gray-400 hover:text-white" href="#">Cookies</a></li>
+</ul>
+</div>
+</div>
+<div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+<p class="text-gray-400 mb-4 md:mb-0">© 2025 Tekko-Fii. Tous droits réservés.</p>
+<div class="flex items-center space-x-4">
+<div class="text-gray-400 flex items-center">
+<i class="ri-visa-line ri-lg mr-2"></i>
+<i class="ri-mastercard-line ri-lg mr-2"></i>
+<i class="ri-paypal-line ri-lg"></i>
+</div>
+</div>
+</div>
+</div>
+</footer>
+</body>
+</html>

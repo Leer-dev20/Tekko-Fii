@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Tekko-Fii - Inscription</title>
+<link href="img/Blue_Purple_Modern_Gradient_Computer_Service_and_Repair_Logo__1_-removebg-preview.png" rel="shortcut icon" type="image/x-icon"/>
+<link href="Tekko-Fii" rel="shortcut icon" type="image/x-icon"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+<link href="projet.html" rel="stylesheet"/>
+<link href="index.html" rel="stylesheet"/>
+<link href="developper.html" rel="stylesheet"/>
+<link href="entreprise.html" rel="stylesheet"/>
+<link href="recherche-dev.html" rel="stylesheet"/>
+<link href="inscrire.html" rel="stylesheet"/>
+<link href="connexion.html" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#4285F4',
+                        secondary: '#34A853'
+                    },
+                    borderRadius: {
+                        'button': '8px'
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        input:focus {
+            outline: none;
+        }
+    </style>
+<link href="style.css" rel="stylesheet"/><script defer="True" src="script.js"></script></head>
+<body class="bg-white min-h-screen">
+<!-- Header -->
+<header class="w-full py-4 px-6 flex justify-between items-center border-b border-gray-100">
+<a class="text-2xl font-bold font-['Pacifico'] text-gray-900" href="index.html">Tekko-Fii</a>
+<nav class="hidden md:flex space-x-8">
+<a class="text-gray-800 hover:text-primary font-medium" href="projet.html">Projets</a>
+<a class="text-gray-800 hover:text-primary font-medium" href="developper.html">Développeurs</a>
+<a class="text-gray-800 hover:text-primary font-medium" href="entreprise.html">Entreprise</a>
+</nav>
+<div class="flex items-center space-x-4">
+<a class="text-gray-800 hover:text-primary font-medium" href="inscrire.html">S'inscrire</a>
+<a class="bg-primary text-white px-5 py-2 rounded-button font-medium hover:bg-blue-600" href="connexion.html">Se connecter</a>
+</div>
+</header>
+<!-- Main -->
+<main class="flex justify-center items-center min-h-screen px-4">
+<div class="w-full max-w-md bg-gray-50 p-8 rounded-xl shadow-lg">
+<h1 class="text-2xl font-semibold text-center text-gray-800 mb-6">Créer un compte</h1>
+<form id="signupForm">
+<div class="mb-4">
+<label class="block mb-1 font-medium" for="fullName">Nom complet</label>
+<input class="w-full px-4 py-2 border border-gray-300 rounded" id="fullName" name="fullName" placeholder="Votre nom complet" required="" type="text"/>
+</div>
+<div class="mb-4">
+<label class="block mb-1 font-medium" for="email">Adresse email</label>
+<input class="w-full px-4 py-2 border border-gray-300 rounded" id="email" name="email" placeholder="leer@domaine.com" required="" type="email"/>
+</div>
+<div class="mb-4">
+<label class="block mb-1 font-medium" for="password">Mot de passe</label>
+<input class="w-full px-4 py-2 border border-gray-300 rounded" id="password" name="password" oninput="checkPasswordStrength()" placeholder="********" required="" type="password"/>
+<div class="text-sm mt-1" id="passwordStrength"></div>
+</div>
+<div class="mb-4">
+<label class="block mb-1 font-medium" for="confirmPassword">Confirmer le mot de passe</label>
+<input class="w-full px-4 py-2 border border-gray-300 rounded" id="confirmPassword" name="confirmPassword" placeholder="********" required="" type="password"/>
+<div class="text-sm text-red-500" id="confirmPasswordError"></div>
+</div>
+<div class="mb-4">
+<label class="block mb-1 font-medium">Type de compte</label>
+<label class="inline-flex items-center mr-4">
+<input class="mr-2" name="accountType" type="radio" value="developer"/> Développeur
+                    </label>
+<label class="inline-flex items-center">
+<input class="mr-2" name="accountType" type="radio" value="client"/> Client
+                    </label>
+</div>
+<div class="mb-4">
+<label class="inline-flex items-center">
+<input class="mr-2" id="terms" type="checkbox"/> J'accepte les  <a class="text-primary underline" href="terms.html"> conditions d'utilisation</a>
+</label>
+</div>
+<button class="w-full bg-primary text-white py-3 rounded-button hover:bg-blue-600" id="submitBtn" type="submit">S'inscrire</button>
+</form>
+<div class="text-center mt-4">
+<p class="text-gray-600">Ou s'inscrire avec :</p>
+<div class="flex flex-col gap-2 mt-2">
+<button class="bg-gray-200 py-2 rounded hover:bg-gray-300">Google</button>
+<button class="bg-gray-200 py-2 rounded hover:bg-gray-300">GitHub</button>
+<button class="bg-gray-200 py-2 rounded hover:bg-gray-300">LinkedIn</button>
+</div>
+</div>
+<div class="text-center mt-4">
+<p class="text-sm">Déjà inscrit ? <a class="text-primary underline" href="connexion.html">Connectez-vous</a></p>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-gray-900 text-white py-12 px-6 mt-12">
+<div class="container mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-10">
+<div>
+<h3 class="text-xl font-bold mb-4 font-['Pacifico']">Tekko-Fii</h3>
+<p class="text-gray-400 mb-6">La marketplace qui connecte développeurs et entreprises.</p>
+</div>
+<div>
+<h4 class="text-lg font-semibold mb-4">Liens rapides</h4>
+<ul class="space-y-2 text-gray-400">
+<li><a class="hover:text-white" href="#">Projets populaires</a></li>
+<li><a class="hover:text-white" href="#">Nouvelles arrivées</a></li>
+<li><a class="hover:text-white" href="#">Développeurs vérifiés</a></li>
+<li><a class="hover:text-white" href="#">Blog</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-lg font-semibold mb-4">Ressources</h4>
+<ul class="space-y-2 text-gray-400">
+<li><a class="hover:text-white" href="#">Documentation</a></li>
+<li><a class="hover:text-white" href="#">Guide du vendeur</a></li>
+<li><a class="hover:text-white" href="#">FAQ</a></li>
+<li><a class="hover:text-white" href="#">Support</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-lg font-semibold mb-4">Légal</h4>
+<ul class="space-y-2 text-gray-400">
+<li><a class="hover:text-white" href="#">Conditions d'utilisation</a></li>
+<li><a class="hover:text-white" href="#">Politique de confidentialité</a></li>
+<li><a class="hover:text-white" href="#">Licences</a></li>
+<li><a class="hover:text-white" href="#">Cookies</a></li>
+</ul>
+</div>
+</div>
+<div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+<p class="text-gray-400 mb-4 md:mb-0">© 2025 Tekko-Fii. Tous droits réservés.</p>
+<div class="flex items-center space-x-4 text-gray-400">
+<i class="ri-visa-line ri-lg"></i>
+<i class="ri-mastercard-line ri-lg"></i>
+<i class="ri-paypal-line ri-lg"></i>
+</div>
+</div>
+</div>
+</footer>
+<script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const passwordField = document.getElementById('password');
+            const confirmPasswordField = document.getElementById('confirmPassword');
+            const confirmPasswordError = document.getElementById('confirmPasswordError');
+
+            confirmPasswordField.addEventListener('input', function () {
+                if (confirmPasswordField.value !== passwordField.value) {
+                    confirmPasswordError.textContent = 'Les mots de passe ne correspondent pas.';
+                } else {
+                    confirmPasswordError.textContent = '';
+                }
+            });
+
+            window.checkPasswordStrength = function () {
+                const passwordStrengthDiv = document.getElementById('passwordStrength');
+                const password = passwordField.value;
+
+                let strength = 'Faible';
+                if (password.length >= 8) {
+                    strength = 'Moyenne';
+                    if (/[A-Z]/.test(password) && /\d/.test(password)) {
+                        strength = 'Forte';
+                    }
+                }
+                passwordStrengthDiv.textContent = 'Force du mot de passe : ' + strength;
+            }
+
+            const signupForm = document.getElementById('signupForm');
+            signupForm.addEventListener('submit', function (event) {
+                event.preventDefault();
+                if (confirmPasswordField.value !== passwordField.value) {
+                    alert('Veuillez vérifier vos mots de passe.');
+                } else if (!document.getElementById('terms').checked) {
+                    alert('Vous devez accepter les conditions d\'utilisation.');
+                } else {
+                    alert('Inscription réussie !');
+                    // Traitement backend ici si nécessaire
+                }
+            });
+        });
+        // Soumission du formulaire
+const signupForm = document.getElementById('signupForm');
+signupForm.addEventListener('submit', function (event) {
+    event.preventDefault();
+    if (confirmPasswordField.value !== passwordField.value) {
+        alert('Veuillez vérifier vos mots de passe.');
+    } else if (!document.getElementById('terms').checked) {
+        alert('Vous devez accepter les conditions d\'utilisation.');
+    } else {
+        alert('Inscription réussie !');
+        window.location.href = " index.html"; // Redirection vers la page d'accueil
+    }
+});
+
+    </script>
+</body>
+</html>

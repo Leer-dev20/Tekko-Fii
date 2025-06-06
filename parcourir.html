@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Déposer un projet - Tekko-Fii</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="img/Blue_Purple_Modern_Gradient_Computer_Service_and_Repair_Logo__1_-removebg-preview.png" rel="shortcut icon" type="image/x-icon"/>
+<link href="Tekko-Fii" rel="shortcut icon" type="image/x-icon"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+<link href="projet.html" rel="stylesheet"/>
+<link href="index.html" rel="stylesheet"/>
+<link href="developper.html" rel="stylesheet"/>
+<link href="entreprise.html" rel="stylesheet"/>
+<link href="recherche-dev.html" rel="stylesheet"/>
+<link href="inscrire.html" rel="stylesheet"/>
+<link href="connexion.html" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#4285F4',
+    secondary:'#34A853'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<style>
+    :where([class^="ri-"])::before { content: "\f3c2"; }
+    body {
+        font-family: 'Inter', sans-serif;
+    }
+    .hero-bg {
+        background-image: url('img/Computer\ png\ icon\ free\ download.jfif');
+        background-size: cover;
+        background-position: right center;
+    }
+    .hero-overlay {
+        background: linear-gradient(90deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.9) 50%, rgba(255,255,255,0.5) 100%);
+    }
+    input:focus {
+        outline: none;
+    }
+</style>
+<link href="style.css" rel="stylesheet"/><script defer="True" src="script.js"></script></head>
+<body class="bg-gray-100 text-gray-800">
+<!-- Header -->
+<header class="w-full py-4 px-6 flex justify-between items-center border-b border-gray-100">
+<div class="flex items-center">
+<a class="text-2xl font-bold font-['Pacifico'] text-gray-900" href="index.html">Tekko-Fii</a>
+</div>
+<div class="flex items-center space-x-8">
+<nav class="hidden md:flex space-x-8">
+<a class="text-gray-800 hover:text-primary font-medium" href="projet.html">Projets</a>
+<a class="text-gray-800 hover:text-primary font-medium" href="developper.html">Développeurs</a>
+<a class="text-gray-800 hover:text-primary font-medium" href="entreprise.html">Entreprise</a>
+</nav>
+<div class="flex items-center space-x-4">
+<a class="text-gray-800 hover:text-primary font-medium whitespace-nowrap" href="inscrire.html">S'inscrire</a>
+<a class="bg-primary text-white px-5 py-2 !rounded-button font-medium hover:bg-blue-600 transition-colors whitespace-nowrap" href="connexion.html">Se connecter</a>
+</div>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="hero-bg w-full relative">
+<div class="hero-overlay w-full">
+<div class="container mx-auto px-6 py-20 md:py-28">
+</div>
+</div>
+</section>
+<div class="max-w-4xl mx-auto mt-12 bg-white shadow-xl rounded-2xl p-10">
+<h1 class="text-3xl font-bold text-center mb-8 text-blue-600">Déposer un projet</h1>
+<form action="#" class="space-y-6" enctype="multipart/form-data" method="POST">
+<div>
+<label class="block text-lg font-medium mb-2">Nom du projet</label>
+<input class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-400" name="projectName" placeholder="Ex : MonApp" type="text"/>
+</div>
+<div>
+<label class="block text-lg font-medium mb-2">Description des fonctionnalités</label>
+<textarea class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-400" name="features" placeholder="Décrivez les fonctionnalités principales…" rows="4"></textarea>
+</div>
+<div>
+<label class="block text-lg font-medium mb-2">Technologies utilisées</label>
+<input class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-400" name="technologies" placeholder="React, Laravel, MySQL…" type="text"/>
+</div>
+<div>
+<label class="block text-lg font-medium mb-2">Prix (en MAD)</label>
+<input class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-400" min="0" name="price" placeholder="Ex : 49.99" step="0.01" type="number"/>
+</div>
+<div>
+<label class="block text-lg font-medium mb-2">Fichier Zip du projet</label>
+<input accept=".zip" class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-400" name="projectFile" type="file"/>
+</div>
+<div class="text-center">
+<button class="bg-blue-600 text-white px-10 py-3 rounded-xl font-semibold hover:bg-blue-700 transition" type="submit">Déposer</button>
+</div>
+</form>
+</div>
+<!-- Footer -->
+<footer class="bg-gray-900 text-white py-12 px-6">
+<div class="container mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-10">
+<div>
+<h3 class="text-xl font-bold mb-4 font-['Pacifico']">Tekko-Fii</h3>
+<p class="text-gray-400 mb-6">La marketplace qui connecte développeurs et entreprises.</p>
+<div class="flex space-x-4">
+<a class="text-gray-400 hover:text-white" href="#">
+<div class="w-10 h-10 flex items-center justify-center">
+<i class="ri-twitter-x-line ri-lg"></i>
+</div>
+</a>
+<a class="text-gray-400 hover:text-white" href="#">
+<div class="w-10 h-10 flex items-center justify-center">
+<i class="ri-linkedin-line ri-lg"></i>
+</div>
+</a>
+<a class="text-gray-400 hover:text-white" href="#">
+<div class="w-10 h-10 flex items-center justify-center">
+<i class="ri-github-line ri-lg"></i>
+</div>
+</a>
+</div>
+</div>
+<div>
+<h4 class="text-lg font-semibold mb-4">Liens rapides</h4>
+<ul class="space-y-2">
+<li><a class="text-gray-400 hover:text-white" href="#">Projets populaires</a></li>
+<li><a class="text-gray-400 hover:text-white" href="#">Nouvelles arrivées</a></li>
+<li><a class="text-gray-400 hover:text-white" href="#">Développeurs vérifiés</a></li>
+<li><a class="text-gray-400 hover:text-white" href="#">Blog</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-lg font-semibold mb-4">Ressources</h4>
+<ul class="space-y-2">
+<li><a class="text-gray-400 hover:text-white" href="#">Documentation</a></li>
+<li><a class="text-gray-400 hover:text-white" href="#">Guide du vendeur</a></li>
+<li><a class="text-gray-400 hover:text-white" href="#">FAQ</a></li>
+<li><a class="text-gray-400 hover:text-white" href="#">Support</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-lg font-semibold mb-4">Légal</h4>
+<ul class="space-y-2">
+<li><a class="text-gray-400 hover:text-white" href="#">Conditions d'utilisation</a></li>
+<li><a class="text-gray-400 hover:text-white" href="#">Politique de confidentialité</a></li>
+<li><a class="text-gray-400 hover:text-white" href="#">Licences</a></li>
+<li><a class="text-gray-400 hover:text-white" href="#">Cookies</a></li>
+</ul>
+</div>
+</div>
+<div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+<p class="text-gray-400 mb-4 md:mb-0">© 2025 Tekko-Fii. Tous droits réservés.</p>
+<div class="flex items-center space-x-4">
+<div class="text-gray-400 flex items-center">
+<i class="ri-visa-line ri-lg mr-2"></i>
+<i class="ri-mastercard-line ri-lg mr-2"></i>
+<i class="ri-paypal-line ri-lg"></i>
+</div>
+</div>
+</div>
+</div>
+</footer>
+</body>
+</html>
