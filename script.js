@@ -266,7 +266,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-// Données  des projets popup
+// Données  des projets 1 popup
 const projects = [
     {
         title: "E-commerce App",
@@ -420,8 +420,8 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-// Données  des projets popup
-const projects = [
+// Données  des projets popup projets 2
+const projects2 = [
     {
         title: "AgriLink",
         author: "Mor Sene",
@@ -434,7 +434,7 @@ const projects = [
     },
     {
         title: "BeugFallouCar",
-        author: "Mina Mané",
+        author: "Moustapha Diallo",
         category: "Site loca&Vente voiture",
         price: "3.325 MAD",
         image: "img/BeugFallouCar - [127.0.0.1].png",
@@ -443,64 +443,64 @@ const projects = [
         github: "#"
     },
     {
-        title: "Plateforme de Réseau Social",
-        author: "Ibrahima LO",
-        category: "Réseau Social",
+        title: "Yombal Connect",
+        author: "Alpha Diop",
+        category: "vitrine professionnelle",
         price: "3.250 MAD",
-        image: "img/projetcard3.jpg",
-        technologies: ["Angular", "Firebase"],
-        description: `Plateforme de réseau social avec fonctionnalités de publication, commentaires, likes et messagerie instantanée. Développée avec Angular et Firebase pour le backend.`,
+        image: "img/yombal_connect.png",
+        technologies: ["React.js", "Django", "MongoDB"],
+        description: `Yombal Connect est une plateforme de mise en relation professionnelle et sociale, dédiée aux entrepreneurs et particuliers africains pour faciliter les échanges et collaborations. Le site offre des services variés, allant de la recherche de partenaires commerciaux à la promotion d'événements locaux.`,
         github: "#"
     },
     {
-        title: "Site Portfolio",
-        author: "Khadija Cissé",
-        category: "Site Web Personnel",
+        title: "Chatgpt-CLI",
+        author: "Elias Waly Ba",
+        category: "morceaux de code",
         price: "541 MAD",
         image: "img/projetcard4.jpg",
-        technologies: ["HTML", "CSS", "JavaScript"],
-        description: `Site portfolio moderne et responsive avec animations fluides. Parfait pour présenter vos travaux et compétences. Code propre et bien documenté.`,
-        github: "#"
+        technologies: ["Coquille"],
+        description: `Une interface de ligne de commande (CLI) simple pour interagir avec le modèle ChatGPT d’OpenAI.`,
+        github: "https://github.com/elias-ba/chatgpt-cli"
     },
     {
-        title: "Système de Blog CMS",
-        author: "Dame Seck",
+        title: "NumMenu-bot",
+        author: "Derguene Mbaye",
         category: "Système de Gestion de Contenu",
         price: "1.300 MAD",
-        image: "img/projetcard5.jpg",
-        technologies: ["PHP", "MySQL", "jQuery"],
-        description: `CMS de blog complet avec éditeur WYSIWYG, gestion des utilisateurs et système de commentaires. Développé avec PHP natif et MySQL.`,
-        github: "#"
+        image: "img/NumMenu-bot.jpg",
+        technologies: ["Python"],
+        description: `Un exemple de chatbot avec un menu basé sur des chiffres qui peut être utilisé comme point de départ pour un projet.`,
+        github: "https://github.com/DerXter/NumMenu-Bot"
     },
     {
-        title: "Kit UI Mobile",
-        author: "Bruno A. Diallo",
-        category: "Design UI/UX",
+        title: "Waxtane",
+        author: "Médoune Siby G. Baldé",
+        category: "Languages",
         price: "920 MAD",
         image: "img/projetcard6.jpg",
-        technologies: ["Sketch", "Figma", "Adobe XD"],
-        description: `Kit d'interface utilisateur moderne pour applications mobiles. Comprend plus de 50 composants personnalisables et un système de design cohérent.`,
-        github: "#"
+        technologies: ["Svelte", "Astro", "CSS", "JS"],
+        description: `Waxtane est un receuil de phrases de discussion traduites en cinq langues (pour le moment). Le Wolof, le Francais, l'Anglais, l'Espagnol et le Catalan. Waxtane vise à faciliter la communication entre personnes parlant différentes langues, en se basant sur un modèle sans prise de têtes la discussion.`,
+        github: "https://github.com/MedouneSGB/Waxtane"
     },
     {
-        title: "Tableau de Bord Analytics",
-        author: "Ibrahima Diouf",
+        title: "Algo-visualiseur",
+        author: "Elias Waly Ba",
         category: "Visualisation de Données",
         price: "2.383 MAD",
-        image: "img/projetcard7.jpg",
-        technologies: ["React", "D3.js", "API REST"],
-        description: `Tableau de bord analytique avec visualisations interactives et temps réel. Intègre plusieurs sources de données et offre des options d'export.`,
-        github: "#"
+        image: "img/algovisualiseur.png",
+        technologies: ["Elixir", "HTML", "CSS", "JS"],
+        description: `Algo-visualiseur est une plate-forme interactive basée sur le Web pour visualiser divers algorithmes, en mettant l’accent sur les algorithmes de recherche de chemin. Construit à l’aide d’Elixir et de Phoenix LiveView, il permet aux utilisateurs d’interagir et d’observer le comportement de différents algorithmes en temps réel.`,
+        github: "https://github.com/elias-ba/algo-visualizer"
     },
 
        {
-        title: "Plateforme d'Apprentissage",
-        author: "Aicha Rassoul",
-        category: "Plateforme d'Apprentissage",
+        title: "SomnolenceDétection",
+        author: "Thierno",
+        category: "SomnolenceDétection",
         price: "2.500 MAD",
         image: "img/projetcard8.jpg",
-        description: `Une application E-commerce permet aux utilisateurs d'acheter des produits en ligne...`,
-        github: "#"
+        description: `+SomnolenceDétection est un système d’alerte de sécurité pour la somnolence du conducteur.`,
+        github: "https://github.com/TiDev00/DrowsinessDetection"
       },
       // Ajoutez ici les 7 autres projets avec leurs infos
     ];
